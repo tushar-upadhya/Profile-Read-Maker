@@ -5,20 +5,19 @@ import Project from "../pages/Project";
 import Profile from "../pages/Profile";
 import NotFound from "../pages/NotFound";
 
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const AppRoutes = () => {
     return (
         <>
             <BrowserRouter>
-                <Navbar />
-
                 <Routes>
                     <Route path="/" element={<Home />} />
                     {/* <Route path="/project" element={<Project />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="*" element={<NotFound />} /> */}
+                <Route path="*" element={<NotFound />} /> */}
                 </Routes>
+                <Footer />
             </BrowserRouter>
         </>
     );
