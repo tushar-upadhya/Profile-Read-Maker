@@ -1,36 +1,38 @@
-import { FaLinkedinIn } from "react-icons/fa";
-import { PiGithubLogoFill } from "react-icons/pi";
+import React from "react";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-row justify-between items-center  text-2xl p-1 w-full">
-            <div className="text-xl lg:text-2xl  text-slate-500">
-                Made by{" "}
-                <a
-                    href="https://pushkaryadav.in/"
-                    className=" text-slate-400 hover:text-slate-900 font-semibold transition-all duration-200"
-                >
-                    Tushar Upadhyay
-                </a>
+        <footer className="bg-gray-100 py-4">
+            <div className="text-center mt-8 mb-4">
+                <div className="text-xl lg:text-2xl text-gray-600">
+                    <span className="text-sky-400 text-xl ">Made by</span>{" "}
+                    <a
+                        href="https://pushkaryadav.in/"
+                        className="text-slate-400 hover:text-slate-900 font-semibold transition-all duration-200"
+                    >
+                        Tushar Upadhyay
+                    </a>
+                </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex justify-center">
                 <a
-                    href="https://www.linkedin.com/in/tushar-upadhyay-54029b135/"
-                    className="transition  h-10 md:w-12 text-slate-400 hover:text-slate-900 rounded-full outline-none flex items-center justify-center"
+                    href="https://www.linkedin.com/in/pushkaryadav/"
+                    className="text-slate-400 hover:text-slate-900 font-semibold transition-all duration-200 mx-2 text-xl"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FaLinkedinIn className="text-xl md:text-2xl" />
+                    <FaLinkedinIn />
                 </a>
 
                 <a
-                    href="https://github.com/tushar-upadhya/markdown"
-                    className="transition  h-10 md:w-12 text-slate-400 hover:text-slate-900 rounded-full outline-none flex items-center justify-center"
+                    href="https://github.com/pushkaryadav"
+                    className="text-slate-400 hover:text-slate-900 font-semibold transition-all duration-200 mx-2 text-xl"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <PiGithubLogoFill className="text-xl md:text-2xl" />
+                    <FaGithub />
                 </a>
             </div>
         </footer>
