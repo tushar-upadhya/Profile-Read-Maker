@@ -1,6 +1,6 @@
 import Icons from "../components/Icons";
 
-export default function FeatureBox(props) {
+const FeatureBox = (props) => {
     return (
         <div className="basis-1/2 p-6 flex items-center md:max-w-sm md:mx-auto lg:max-w-lg xl:max-w-xl">
             <div className="shrink-0">
@@ -14,4 +14,5 @@ export default function FeatureBox(props) {
             </div>
         </div>
     );
-}
+};
+export default FeatureBox;

@@ -6,11 +6,13 @@ import Profile from "../pages/Profile";
 import NotFound from "../pages/NotFound";
 
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const AppRoutes = () => {
     return (
         <>
             <BrowserRouter>
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
 
