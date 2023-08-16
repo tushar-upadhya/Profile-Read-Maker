@@ -1,5 +1,6 @@
 import Create from "../components/Create";
 import Feature from "../components/Feature";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
 
             <Create />
 
-            {/* <Feature /> */}
+            <Feature />
+
+            <Footer />
         </>
     );
 };

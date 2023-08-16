@@ -1,11 +1,12 @@
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { PiGithubLogoFill } from "react-icons/pi";
 
 const Footer = () => {
     return (
         <footer className="bg-gray-100">
             <div className="text-center mb-4">
                 <div className="text-xl lg:text-2xl text-gray-600">
-                    <span className="text-sky-400 text-sm ">Made by</span>{" "}
+                    <span className="text-sky-400 text-sm">Made by</span>{" "}
                     <a
                         href="https://tusharupadhyay.vercel.app/"
                         className="text-slate-400 text-xl hover:text-slate-900 font-semibold transition-all duration-200"
@@ -31,7 +32,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FaGithub />
+                    <PiGithubLogoFill />
                 </a>
             </div>
         </footer>

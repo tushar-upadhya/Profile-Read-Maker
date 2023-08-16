@@ -5,7 +5,7 @@ import {
     FPL,
     versionControlBadges,
     SocialsBadges,
-} from "../data/Badges";
+} from "../data/BadgesData";
 
 import Button from "../share/Button";
 import BadgeButton from "../share/BadgeButton";
@@ -381,7 +381,7 @@ const Profile = () => {
                                 }
                             />
                         )}
-                        {profile.step < 5 && (
+                        {profile.step < 4 && (
                             <Button
                                 label="Continue &gt;"
                                 isContinue={true}
@@ -395,10 +395,24 @@ const Profile = () => {
                                 }
                             />
                         )}
+
+                        {profile.step === 4 && (
+                            <>
+                                <Preview
+                                    profile={profile}
+                                    database={dataBase}
+                                    versionControl={versionControl}
+                                    fpl={Fpl}
+                                    languages={language}
+                                    social={social}
+                                    badgeType={badgeType}
+                                />
+                            </>
+                        )}
                     </div>
 
                     <StepMessage
-                        condition={profile.step === 5}
+                        condition={profile.step === 4}
                         message="Hey👋, Can you help me to grow by sharing"
                     />
 
