@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Project from "../pages/Project";
 import Profile from "../pages/Profile";
-import NotFound from "../pages/NotFound";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -19,8 +18,6 @@ const AppRoutes = () => {
                     <Route path="/project" element={<Project />} />
 
                     <Route path="/profile" element={<Profile />} />
-
-                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </>

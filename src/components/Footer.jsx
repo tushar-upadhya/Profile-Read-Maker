@@ -18,7 +18,7 @@ const Footer = () => {
 
             <div className="flex justify-center">
                 <a
-                    href="https://www.linkedin.com/in/pushkaryadav/"
+                    href="https://www.linkedin.com/in/tushar-upadhyay-54029b135/"
                     className="text-slate-400 hover:text-slate-900 font-semibold transition-all duration-200 mx-2 text-xl"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -27,7 +27,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                    href="https://github.com/pushkaryadav"
+                    href="https://github.com/tushar-upadhya"
                     className="text-slate-400 hover:text-slate-900 font-semibold transition-all duration-200 mx-2 text-xl"
                     target="_blank"
                     rel="noopener noreferrer"

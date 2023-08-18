@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
     DatabaseBadges,
     LanguageBadges,
@@ -10,6 +11,8 @@ import {
 import Button from "../share/Button";
 import BadgeButton from "../share/BadgeButton";
 import StepMessage from "../share/StepMessage";
+
+import ProfilePreview from "../components/ProfilePreview";
 
 const Profile = () => {
     const [profile, setProfile] = useState({
@@ -33,7 +36,7 @@ const Profile = () => {
 
     const [social, setSocial] = useState([...SocialsBadges]);
 
-    const [badgeType, setBadgeType] = useState();
+    const [badgeType, setBadgeType] = useState("for-the-badge");
 
     const handleTechLanguage = (techName) => {
         const myNextList = [...language];
@@ -136,7 +139,6 @@ const Profile = () => {
                             />
                         </>
                     )}
-
                     {profile.step === 2 && (
                         <>
                             <textarea
@@ -144,7 +146,6 @@ const Profile = () => {
                                 rows="12"
                                 cols="30"
                                 placeholder="
-                                (you can write md too😉)
                                 ## 🔭 I’m currently working on
                                 ## 👯 I’m looking to collaborate on
                                 ## 🤝 I’m looking for help with
@@ -164,7 +165,6 @@ const Profile = () => {
                             ></textarea>
                         </>
                     )}
-
                     {profile.step === 3 && (
                         <>
                             <div className="text-center text-xl text-black">
@@ -192,10 +192,11 @@ const Profile = () => {
                                 </select>
                             </div>
 
+                            {/* Languages */}
+
                             <div className="text-slate-900 font-medium pt-6 pb-2">
                                 Languages
                             </div>
-
                             <div className="font-medium text-xl">
                                 <div className="text-slate-700">
                                     {language.map((badge) => (
@@ -227,10 +228,11 @@ const Profile = () => {
                                     ))}
                                 </div>
 
+                                {/* Framework & Libraries */}
+
                                 <div className="text-slate-900 font-medium pt-6 pb-2">
                                     Framework & Libraries
                                 </div>
-
                                 <div className="text-slate-700">
                                     {Fpl.map((badge) => (
                                         <div
@@ -259,10 +261,11 @@ const Profile = () => {
                                     ))}
                                 </div>
 
+                                {/* DATABASE badge is not working */}
+
                                 <div className="text-slate-900 font-medium pt-6 pb-2">
                                     Databases
                                 </div>
-
                                 <div className="text-slate-700">
                                     {dataBase.map((badge) => (
                                         <div
@@ -293,10 +296,11 @@ const Profile = () => {
                                     ))}
                                 </div>
 
+                                {/*  Version Control  */}
+
                                 <div className="text-slate-900 font-medium pt-6 pb-2">
                                     Version Control
                                 </div>
-
                                 <div className="text-slate-700">
                                     {versionControl.map((badge) => (
                                         <div
@@ -327,10 +331,11 @@ const Profile = () => {
                                     ))}
                                 </div>
 
+                                {/* Socials */}
+
                                 <div className="text-slate-900 font-medium pt-6 pb-2">
                                     Socials
                                 </div>
-
                                 <div className="text-slate-700">
                                     {SocialsBadges.map((badge) => (
                                         <div
@@ -361,11 +366,50 @@ const Profile = () => {
                             </div>
                         </>
                     )}
+                    {/* {profile.step === 4 && (
+                        <>
+                            <div className="mb-6 text-black text-lg font-medium grid place-items-center">
+                                <div className="text-xl lg:text-2xl">
+                                    {" "}
+                                    Wait Now you can add your realtime tweet too
+                                    and see it on your profile
+                                </div>
+
+                                <input
+                                    type="text"
+                                    className="transition-all p-2 ring-2 rounded-lg w-full ring-purple-600/10 focus:ring-purple-600/20 text-purple-700 outline-none md:w-2/3 mx-auto mt-8 lg:mt-12  lg:mb-6 xl:mt-16 xl:mb-8"
+                                    value={twitterProfile}
+                                    onChange={(e) => {
+                                        setTwitterProfile(e.target.value);
+                                    }}
+                                    id="data"
+                                    placeholder={"twitter username without @"}
+                                    autoComplete="off"
+                                />
+                            </div>
+                        </>
+                    )} */}
+                    {profile.step === 4 && (
+                        <>
+                            <ProfilePreview
+                                profile={profile}
+                                // project={project}
+                                database={dataBase}
+                                versionControl={versionControl}
+                                fpl={Fpl}
+                                languages={language}
+                                social={social}
+                                badgeType={badgeType}
+                                // twitterProfile={twitterProfile}
+                            />
+                        </>
+                    )}
 
                     <div
-                        className={`w-full mt-6 text-xl ${
-                            profile.step > 1 ? "flex gap-1" : ""
-                        }`}
+                        className={
+                            "w-full mt-6 text-xl " +
+                            (profile.step > 1 && "flex gap-1")
+                        }
                     >
                         {profile.step > 1 && (
                             <Button
@@ -381,6 +425,7 @@ const Profile = () => {
                                 }
                             />
                         )}
+
                         {profile.step < 4 && (
                             <Button
                                 label="Continue &gt;"
@@ -394,20 +439,6 @@ const Profile = () => {
                                     })
                                 }
                             />
-                        )}
-
-                        {profile.step === 4 && (
-                            <>
-                                <Preview
-                                    profile={profile}
-                                    database={dataBase}
-                                    versionControl={versionControl}
-                                    fpl={Fpl}
-                                    languages={language}
-                                    social={social}
-                                    badgeType={badgeType}
-                                />
-                            </>
                         )}
                     </div>
 
