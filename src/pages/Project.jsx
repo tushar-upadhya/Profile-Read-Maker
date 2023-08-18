@@ -531,8 +531,8 @@ const Project = () => {
                     />
 
                     <StepMessage
-                        condition={project.step > 1}
-                        message="no fields are not mandatory, you may leave them blank"
+                        condition={project.step > 1 && project.step !== 7}
+                        message="No fields are mandatory; you may leave them blank."
                     />
                 </div>
             </div>

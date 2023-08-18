@@ -12,7 +12,7 @@ const ProfilePreview = ({
     fpl,
     social,
     badgeType,
-    twitterUsername,
+    leetcodeUsername,
 }) => {
     let about = profile && profile.about ? profile.about.split("\n") : [];
 
@@ -45,6 +45,7 @@ const ProfilePreview = ({
                         </>
                     )}
                     <br /># Tech Stack <br />
+                    {/* language */}
                     {languages.map(
                         (badge) =>
                             badge.isSelected && (
@@ -58,6 +59,7 @@ const ProfilePreview = ({
                                 </span>
                             )
                     )}
+                    {/* framework and library */}
                     {fpl.map(
                         (badge) =>
                             badge.isSelected && (
@@ -71,6 +73,7 @@ const ProfilePreview = ({
                                 </span>
                             )
                     )}
+                    {/* database */}
                     {database.map(
                         (badge) =>
                             badge.isSelected && (
@@ -84,6 +87,7 @@ const ProfilePreview = ({
                                 </span>
                             )
                     )}
+                    {/* version control */}
                     {versionControl.map(
                         (badge) =>
                             badge.isSelected && (
@@ -97,6 +101,7 @@ const ProfilePreview = ({
                                 </span>
                             )
                     )}
+                    {/* socials */}
                     {social.map(
                         (badge) =>
                             badge.isSelected && (
@@ -128,16 +133,17 @@ const ProfilePreview = ({
                         </>
                     )}
                     <br />
-                    {/* {!(twitterUsername === "") && (
+                    {/* leetcode */}
+                    {!(leetcodeUsername === "") && (
                         <>
                             # Latest Tweet <br />
                             <code>
                                 [![](https://twitter.com/_tusharupadhyay
-                                {twitterUsername}
+                                {leetcodeUsername}
                                 )](https://twitter.com/_tusharupadhyay)
                             </code>
                         </>
-                    )} */}
+                    )}
                     <br />
                     <br />
                     {!(profile.username === "") && (
@@ -147,6 +153,7 @@ const ProfilePreview = ({
                             &icon=0&color=0)](https://visitcount.itsvg.in)
                         </>
                     )}
+                    {" Happy Coding 🚀🔥"}
                     <br />
                     {"<-- made using https://twitter.com/_tusharupadhyay  -->"}
                 </div>
@@ -269,47 +276,39 @@ const ProfilePreview = ({
                                 Github Stats
                             </div>
                             <img
-                                src={
-                                    "https://github-readme-stats.vercel.app/api?username=" +
-                                    profile.username +
-                                    "&hide_border=false&include_all_commits=false&count_private=false"
-                                }
+                                src={`https://github-readme-stats.vercel.app/api?username=${profile.username}&hide_border=false&include_all_commits=false&count_private=false&theme=gruvbox`}
                                 alt="stats"
                             />
                             <img
-                                src={
-                                    "https://github-readme-streak-stats.herokuapp.com/?user=" +
-                                    profile.username +
-                                    "&hide_border=false"
-                                }
+                                src={`https://github-readme-streak-stats.herokuapp.com/?user=${profile.username}&hide_border=false&theme=gruvbox`}
                                 alt="stats"
                             />
                             <img
-                                src={
-                                    "https://github-readme-stats.vercel.app/api/top-langs/?username=" +
-                                    profile.username +
-                                    "&hide_border=false&include_all_commits=false&count_private=false&layout=compact"
-                                }
+                                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${profile.username}&hide_border=false&include_all_commits=false&count_private=false&layout=compact&theme=gruvbox`}
                                 alt="stats"
                             />
                         </>
                     )}
-                    {/* {!(twitterUsername === "") && (
+
+                    {/* Leetcode */}
+
+                    {!(leetcodeUsername === "") && (
                         <>
-                            <div className="text-2xl mt-4 text-black">
-                                Latest Tweet
+                            <div className="text-2xl font-medium mt-4">
+                                LeetCode Stats
                             </div>
-                            <img
-                                src={
-                                    "https://twitter.com/_tusharupadhyay" +
-                                    twitterUsername +
-                                    "?bg=264348"
-                                }
-                                alt="latest tweets "
-                                loading="lazy"
-                            />
+                            <a
+                                href={`https://leetcode-stats-six.vercel.app/?username=${leetcodeUsername}&theme=dark`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={`https://leetcode-stats-six.vercel.app/?username=${leetcodeUsername}&theme=dark`}
+                                    alt="LeetCode stats"
+                                />
+                            </a>
                         </>
-                    )} */}
+                    )}
                     {!(profile.username === "") && (
                         <img
                             src={

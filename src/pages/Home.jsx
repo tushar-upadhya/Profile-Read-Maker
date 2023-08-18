@@ -10,7 +10,7 @@ const Home = () => {
 
             <Create />
 
-            <Feature />
+            {/* <Feature /> */}
 
             <Footer />
         </>

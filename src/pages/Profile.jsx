@@ -22,7 +22,7 @@ const Profile = () => {
         about: "",
     });
 
-    const [twitterProfile, setTwitterProfile] = useState("");
+    const [leetcodeUsername, setLeetcodeUsername] = useState("");
 
     const [language, setLanguage] = useState([...LanguageBadges]);
 
@@ -96,7 +96,7 @@ const Profile = () => {
                     }
                 >
                     <div className="text-white bg-violet-500 float-right w-fit px-2 py-1 text-center rounded">
-                        Step: <span>{profile.step}</span> / <span>4</span>
+                        Step: <span>{profile.step}</span> / <span>5</span>
                     </div>
 
                     {profile.step === 1 && (
@@ -261,7 +261,7 @@ const Profile = () => {
                                     ))}
                                 </div>
 
-                                {/* DATABASE badge is not working */}
+                                {/* database*/}
 
                                 <div className="text-slate-900 font-medium pt-6 pb-2">
                                     Databases
@@ -366,41 +366,46 @@ const Profile = () => {
                             </div>
                         </>
                     )}
-                    {/* {profile.step === 4 && (
+                    {profile.step === 4 && (
                         <>
                             <div className="mb-6 text-black text-lg font-medium grid place-items-center">
                                 <div className="text-xl lg:text-2xl">
                                     {" "}
-                                    Wait Now you can add your realtime tweet too
-                                    and see it on your profile
+                                    <span className="text-yellow-600">
+                                        WAIT !
+                                    </span>{" "}
+                                    Now you can add your realtime{" "}
+                                    <span className="text-yellow-700">
+                                        LeetCode
+                                    </span>{" "}
+                                    stats too and see it on your profile
                                 </div>
 
                                 <input
                                     type="text"
                                     className="transition-all p-2 ring-2 rounded-lg w-full ring-purple-600/10 focus:ring-purple-600/20 text-purple-700 outline-none md:w-2/3 mx-auto mt-8 lg:mt-12  lg:mb-6 xl:mt-16 xl:mb-8"
-                                    value={twitterProfile}
+                                    value={leetcodeUsername}
                                     onChange={(e) => {
-                                        setTwitterProfile(e.target.value);
+                                        setLeetcodeUsername(e.target.value);
                                     }}
                                     id="data"
-                                    placeholder={"twitter username without @"}
+                                    placeholder={"leetcode username"}
                                     autoComplete="off"
                                 />
                             </div>
                         </>
-                    )} */}
-                    {profile.step === 4 && (
+                    )}
+                    {profile.step === 5 && (
                         <>
                             <ProfilePreview
                                 profile={profile}
-                                // project={project}
                                 database={dataBase}
                                 versionControl={versionControl}
                                 fpl={Fpl}
                                 languages={language}
                                 social={social}
                                 badgeType={badgeType}
-                                // twitterProfile={twitterProfile}
+                                leetcodeUsername={leetcodeUsername}
                             />
                         </>
                     )}
@@ -426,7 +431,7 @@ const Profile = () => {
                             />
                         )}
 
-                        {profile.step < 4 && (
+                        {profile.step < 5 && (
                             <Button
                                 label="Continue &gt;"
                                 isContinue={true}
@@ -443,13 +448,13 @@ const Profile = () => {
                     </div>
 
                     <StepMessage
-                        condition={profile.step === 4}
+                        condition={profile.step === 5}
                         message="Hey👋, Can you help me to grow by sharing"
                     />
 
                     <StepMessage
-                        condition={profile.step > 1}
-                        message="no fields are not mandatory, you may leave them blank"
+                        condition={profile.step > 1 && profile.step !== 5}
+                        message="No fields are mandatory; you may leave them blank."
                     />
                 </div>
             </div>
