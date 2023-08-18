@@ -1,7 +1,27 @@
 <div align="center"><h1> <img src=http://localhost:5173/src/assets/fav.ico width="32px"/> Profile Readme Maker (PRM) </h1> </div>
 
 # About
-Setup: Set up your React project using create-react-app or your preferred method. Install the required dependencies, including react-router-dom and tailwindcss. Create Routing: Use react-router-dom to create routes for different sections of your application, such as the GitHub profile builder and project README builder. GitHub Profile Builder: Create components for different steps of building the GitHub profile. Implement the form fields for user details like name, username, bio, etc. Create toggle buttons for different sections like skills, projects, social links, etc. Add functionality to select badges for skills, languages, frameworks, and more. Preview the GitHub profile in real-time as users make changes. Allow users to customize the style of badges using Tailwind CSS classes. Project README Builder: Create components for different steps of building the project README. Implement form fields for project details like title, description, features, installation instructions, etc. Allow users to add badges, code snippets, screenshots, and other media. Preview the project README in real-time as users make changes. Use Tailwind CSS classes to style the project README components. State Management: Use React's useState and useEffect hooks to manage state within your components. Keep track of user inputs, selected badges, and other data. Styling: Utilize Tailwind CSS for styling your components and providing a visually appealing and responsive design. Validation and Error Handling: Implement validation for user inputs and display error messages if required fields are not filled or inputs are not in the correct format. Dynamic Routing: Use react-router-dom to navigate between different sections and steps of the profile and project builders. GitHub API Integration (Optional): Integrate the GitHub API to fetch a user's actual GitHub data for pre-filling the GitHub profile builder. Persistence: Consider using local storage or a backend server to save users' progress if they want to come back and continue working on their profile or project README later. Deployment: Deploy your application using platforms like Vercel. Testing: Test your application thoroughly to ensure all features are working as expected and handle edge cases gracefully.
+* Setup:
+Set up your React project using create-react-app or your preferred method. Install the required dependencies, including react-router-dom and tailwindcss.
+* Create Routing:
+Use react-router-dom to create routes for different sections of your application, such as the GitHub profile builder and project README builder.
+
+* GitHub Profile Builder:
+
+  * Create components for different steps of building the GitHub profile.
+  * Implement the form fields for user details like name, username, bio, etc.
+  * Create toggle buttons for different sections like skills, projects, social links, etc.
+  * Add functionality to select badges for skills, languages, frameworks, and more.
+  * Preview the GitHub profile in real-time as users make changes.
+  * Allow users to customize the style of badges using Tailwind CSS classes.
+ 
+* Project README Builder:
+
+  * Create components for different steps of building the project README.
+  * Implement form fields for project details like title, description, features, installation instructions, etc.
+  * Allow users to add badges, code snippets, screenshots, and other media.
+  * Preview the project README in real-time as users make changes.
+  * Use Tailwind CSS classes to style the project README components.
 
 ## Website is Live : [https://prm-tusharupadhyay.vercel.app/](https://prm-tusharupadhyay.vercel.app/)
 
