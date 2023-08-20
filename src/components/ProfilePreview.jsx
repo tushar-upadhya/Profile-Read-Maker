@@ -136,11 +136,11 @@ const ProfilePreview = ({
                     {/* leetcode */}
                     {!(leetcodeUsername === "") && (
                         <>
-                            # Latest Tweet <br />
+                            # leetcode <br />
                             <code>
-                                [![](https://twitter.com/_tusharupadhyay
+                                [![](https://leetcode.com/_tusharupadhyay
                                 {leetcodeUsername}
-                                )](https://twitter.com/_tusharupadhyay)
+                                )](https://leetcode.com/_tusharupadhyay)
                             </code>
                         </>
                     )}
@@ -155,7 +155,7 @@ const ProfilePreview = ({
                     )}
                     {" Happy Coding 🚀🔥"}
                     <br />
-                    {"<-- made using https://twitter.com/_tusharupadhyay  -->"}
+                    {/* {"<-- made using https://twitter.com/_tusharupadhyay  -->"} */}
                 </div>
             </div>
             <div className="mt-4 md:mt-8 text-xl">
