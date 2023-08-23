@@ -134,16 +134,8 @@ const ProfilePreview = ({
                     )}
                     <br />
                     {/* leetcode */}
-                    {!(leetcodeUsername === "") && (
-                        <>
-                            # leetcode <br />
-                            <code>
-                                [![](https://leetcode.com/_tusharupadhyay
-                                {leetcodeUsername}
-                                )](https://leetcode.com/_tusharupadhyay)
-                            </code>
-                        </>
-                    )}
+                    [![LeetCode
+                    Profile](https://img.shields.io/badge/LeetCode-Profile-orange?style=flat-square&logo=leetcode)](https://leetcode.com/YourUsername/)
                     <br />
                     <br />
                     {!(profile.username === "") && (
