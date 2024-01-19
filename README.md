@@ -46,12 +46,5 @@ Use react-router-dom to create routes for different sections of your application
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?logo=github&logoColor=white&style=for-the-badge)
 
 
-# Contribute
-1. Fork the Repository Click the "Fork" button at the top right corner of this repository to create your own copy.
-2. Clone Your Fork Clone the repository to your local machine using the following command: git clone https://github.com/your-username/readme-maker.git 
-3. Create a New Branch Create a new branch for your contribution: bash Copy code cd readme-maker git checkout -b feature/new-feature Replace new-feature with a descriptive name for your feature or bug fix.
-4. Make Changes Make the necessary changes and improvements in your branch.
-5. Test Test your changes thoroughly to ensure they work as expected.
-6. Commit and Push Commit your changes and push them to your forked repository: bash Copy code git add . git commit -m "Add new feature" git push origin feature/new-feature
-7. Create a Pull Request Go to the original repository and click the "Compare & pull request" button. Fill in the details of your pull request, describing your changes and improvements. 8. Review and Collaboration Once your pull request is submitted, the maintainers will review your code. Be prepared for feedback and possible changes.
+
 <!-- made using https://tusharupadhyay.vercel.app/ -->
